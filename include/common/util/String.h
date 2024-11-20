@@ -9,4 +9,5 @@ namespace Common::Util::String {
     std::vector<int> parseVectorInt(const std::string &str);
     std::vector<std::vector<std::string>> parse2DVectorString(const std::string &str);
     std::vector<std::vector<int>> parse2DVectorInt(const std::string &str);
+    std::vector<std::vector<char>> parse2DVectorChar(const std::string &str);
 }
