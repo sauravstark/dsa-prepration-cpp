@@ -8,13 +8,13 @@
 TEST(LeetCode, LC23_MergeKSortedLists) {
     LeetCode::Util::TestcaseReader testcaseReader("testcases/leetcode/LC23_MergeKSortedLists.txt", 2);
 
-    while(testcaseReader.hasNext()) {
+    while (testcaseReader.hasNext()) {
         const auto words = testcaseReader.next();
         const auto matrix = Common::Util::String::parse2DVectorInt(words[0]);
         const auto expected = Common::Util::String::parseVectorInt(words[1]);
 
-        std::vector<LeetCode::Datatype::ListNode*> lists;
-        for (const auto& vec: matrix)
+        std::vector<LeetCode::Datatype::ListNode *> lists;
+        for (const auto &vec: matrix)
             lists.push_back(LeetCode::Datatype::ListNode::buildListFromVector(vec));
 
         const auto expectedList = LeetCode::Datatype::ListNode::buildListFromVector(expected);

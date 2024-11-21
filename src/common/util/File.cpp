@@ -1,7 +1,7 @@
 #include <common/util/File.h>
 #include <fstream>
 
-std::vector<std::string> Common::Util::File::readLinesFromFile(const std::string& filename) {
+std::vector<std::string> Common::Util::File::readLinesFromFile(const std::string &filename) {
     std::ifstream file(filename);
     if (!file.is_open()) {
         throw std::runtime_error("Could not open file: " + filename);
