@@ -72,7 +72,7 @@ std::vector<std::vector<int> > Common::Util::String::parse2DVectorInt(const std:
     return intMatrix;
 }
 
-std::vector<std::vector<char>> Common::Util::String::parse2DVectorChar(const std::string &str) {
+std::vector<std::vector<char> > Common::Util::String::parse2DVectorChar(const std::string &str) {
     const auto stringMatrix = parse2DVectorString(str);
     std::vector<std::vector<char> > charMatrix(stringMatrix.size());
 

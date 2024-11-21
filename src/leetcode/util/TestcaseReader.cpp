@@ -5,8 +5,8 @@
 #include <common/util/File.h>
 #include <common/util/String.h>
 
-template <typename T>
-std::ostream& operator<<(std::ostream& os, const std::vector<T>& vec) {
+template<typename T>
+std::ostream &operator<<(std::ostream &os, const std::vector<T> &vec) {
     if (vec.empty())
         return os << "[]";
     os << "[" << vec[0];

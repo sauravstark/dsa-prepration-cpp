@@ -20,7 +20,7 @@ LeetCode::Datatype::ListNode *LeetCode::Datatype::ListNode::buildListFromVector(
 }
 
 bool LeetCode::Datatype::ListNode::compareLists(const ListNode *lhs, const ListNode *rhs) {
-    while(lhs != nullptr && rhs != nullptr) {
+    while (lhs != nullptr && rhs != nullptr) {
         if (lhs == rhs)
             return true;
         if (lhs->val != rhs->val)
