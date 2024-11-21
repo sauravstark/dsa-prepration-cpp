@@ -7,7 +7,7 @@ TEST(LeetCode, LC940_DistinctSubsequencesII) {
 
     while (testcaseReader.hasNext()) {
         const auto words = testcaseReader.next();
-        const auto& input = words[0];
+        const auto &input = words[0];
         const auto expected = std::stoi(words[1]);
         const auto result = LeetCode::Problems::LC940::distinctSubseqII(input);
         EXPECT_EQ(expected, result);

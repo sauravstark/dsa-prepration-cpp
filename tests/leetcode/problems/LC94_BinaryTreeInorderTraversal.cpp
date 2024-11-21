@@ -6,7 +6,7 @@
 TEST(LeetCode, LC94_BinaryTreeInorderTraversal) {
     LeetCode::Util::TestcaseReader testcaseReader("testcases/leetcode/LC94_BinaryTreeInorderTraversal.txt", 2);
 
-    while(testcaseReader.hasNext()) {
+    while (testcaseReader.hasNext()) {
         const auto words = testcaseReader.next();
         const auto input = Common::Util::String::parseVectorString(words[0]);
         const auto expected = Common::Util::String::parseVectorInt(words[1]);

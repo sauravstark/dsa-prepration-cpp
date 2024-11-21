@@ -1,6 +1,6 @@
 #include <leetcode/problems/LC85_MaximalRectangle.h>
 
-int LeetCode::Problems::LC85::maximalRectangle(const std::vector<std::vector<char>> &matrix) {
+int LeetCode::Problems::LC85::maximalRectangle(const std::vector<std::vector<char> > &matrix) {
     if (matrix.empty() || matrix.front().empty())
         return 0;
 

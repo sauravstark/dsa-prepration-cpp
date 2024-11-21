@@ -1,6 +1,6 @@
 #include <leetcode/problems/LC37_SudokuSolver.h>
 
-bool isValidDigit(const std::vector<std::vector<char>> &board, const int row, const int col) {
+bool isValidDigit(const std::vector<std::vector<char> > &board, const int row, const int col) {
     for (int i = 0; i < 9; ++i) {
         if (col != i && board[row][col] == board[row][i])
             return false;
@@ -14,7 +14,7 @@ bool isValidDigit(const std::vector<std::vector<char>> &board, const int row, co
     return true;
 }
 
-bool recursiveSolution(std::vector<std::vector<char>> &board, const int index) {
+bool recursiveSolution(std::vector<std::vector<char> > &board, const int index) {
     if (index == 81)
         return true;
 
@@ -33,6 +33,6 @@ bool recursiveSolution(std::vector<std::vector<char>> &board, const int index) {
     return false;
 }
 
-void LeetCode::Problems::LC37::solveSudoku(std::vector<std::vector<char>> &board) {
+void LeetCode::Problems::LC37::solveSudoku(std::vector<std::vector<char> > &board) {
     recursiveSolution(board, 0);
 }

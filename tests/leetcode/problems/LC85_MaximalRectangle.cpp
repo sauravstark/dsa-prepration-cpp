@@ -6,7 +6,7 @@
 TEST(LeetCode, LC85_MaximalRectangle) {
     LeetCode::Util::TestcaseReader testcaseReader("testcases/leetcode/LC85_MaximalRectangle.txt", 2);
 
-    while(testcaseReader.hasNext()) {
+    while (testcaseReader.hasNext()) {
         const auto words = testcaseReader.next();
         const auto matrix = Common::Util::String::parse2DVectorChar(words[0]);
         const auto expected = std::stoi(words[1]);

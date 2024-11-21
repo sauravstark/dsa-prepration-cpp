@@ -6,7 +6,7 @@
 TEST(LeetCode, LC37_SudokuSolver) {
     LeetCode::Util::TestcaseReader testcaseReader("testcases/leetcode/LC37_SudokuSolver.txt", 2);
 
-    while(testcaseReader.hasNext()) {
+    while (testcaseReader.hasNext()) {
         const auto words = testcaseReader.next();
         auto board = Common::Util::String::parse2DVectorChar(words[0]);
         const auto expected = Common::Util::String::parse2DVectorChar(words[1]);

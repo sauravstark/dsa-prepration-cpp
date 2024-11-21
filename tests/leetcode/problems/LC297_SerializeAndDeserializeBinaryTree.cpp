@@ -7,12 +7,12 @@
 TEST(LeetCode, LC297_SerializeAndDeserializeBinaryTree) {
     LeetCode::Util::TestcaseReader testcaseReader("testcases/leetcode/LC297_SerializeAndDeserializeBinaryTree.txt", 1);
 
-    while(testcaseReader.hasNext()) {
+    while (testcaseReader.hasNext()) {
         const auto words = testcaseReader.next();
         const auto input = Common::Util::String::parseVectorString(words[0]);
         const auto inputTree = LeetCode::DataTypes::TreeNode::buildTreeFromVector(input);
         const auto serializedTree = LeetCode::Problems::LC297::serialize(inputTree);
-        const auto deserializedTree  = LeetCode::Problems::LC297::deserialize(serializedTree);
+        const auto deserializedTree = LeetCode::Problems::LC297::deserialize(serializedTree);
 
         ASSERT_TRUE(LeetCode::DataTypes::TreeNode::compareTrees(inputTree, deserializedTree));
 

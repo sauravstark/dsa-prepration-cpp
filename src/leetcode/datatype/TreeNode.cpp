@@ -8,10 +8,11 @@ LeetCode::DataTypes::TreeNode::TreeNode(): val(0), left(nullptr), right(nullptr)
 LeetCode::DataTypes::TreeNode::TreeNode(const int x): val(x), left(nullptr), right(nullptr) {
 }
 
-LeetCode::DataTypes::TreeNode::TreeNode(const int x, TreeNode *left, TreeNode *right): val(x), left(left), right(right) {
+LeetCode::DataTypes::TreeNode::TreeNode(const int x, TreeNode *left,
+                                        TreeNode *right): val(x), left(left), right(right) {
 }
 
-LeetCode::DataTypes::TreeNode * LeetCode::DataTypes::TreeNode::buildTreeFromVector(const std::vector<std::string> &vec) {
+LeetCode::DataTypes::TreeNode *LeetCode::DataTypes::TreeNode::buildTreeFromVector(const std::vector<std::string> &vec) {
     if (vec.empty())
         return nullptr;
 

@@ -1,6 +1,7 @@
 #include <leetcode/problems/LC2458_HeightOfBinaryTreeAfterSubtreeRemovalQueries.h>
 
-void traverse(const LeetCode::DataTypes::TreeNode* node, std::vector<int> &nodeLevelMap, std::vector<int> &nodeDepthMap, std::vector<std::vector<int> > &levelMaxDepthMap, const int level) {
+void traverse(const LeetCode::DataTypes::TreeNode *node, std::vector<int> &nodeLevelMap, std::vector<int> &nodeDepthMap,
+              std::vector<std::vector<int> > &levelMaxDepthMap, const int level) {
     if (node == nullptr)
         return;
 
@@ -31,7 +32,7 @@ void traverse(const LeetCode::DataTypes::TreeNode* node, std::vector<int> &nodeL
 }
 
 std::vector<int> LeetCode::Problems::LC2458::treeQueries(const DataTypes::TreeNode *root,
-    const std::vector<int> &queries) {
+                                                         const std::vector<int> &queries) {
     std::vector<int> nodeLevelMap;
     std::vector<int> nodeDepthMap;
     std::vector<std::vector<int> > levelMaxDepthMap;
@@ -41,10 +42,10 @@ std::vector<int> LeetCode::Problems::LC2458::treeQueries(const DataTypes::TreeNo
 
     std::vector<int> ans;
     ans.reserve(queries.size());
-    for (const auto node : queries) {
+    for (const auto node: queries) {
         const int nodeLevel = nodeLevelMap[node - 1];
         const int nodeDepth = nodeDepthMap[node - 1];
-        if (const auto& levelMaxDepth = levelMaxDepthMap[nodeLevel]; levelMaxDepth.size() == 1)
+        if (const auto &levelMaxDepth = levelMaxDepthMap[nodeLevel]; levelMaxDepth.size() == 1)
             ans.push_back(nodeLevel - 1);
         else if (levelMaxDepth[0] == nodeDepth)
             ans.push_back(rootDepth - levelMaxDepth[0] + levelMaxDepth[1] - 1);

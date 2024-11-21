@@ -5,7 +5,8 @@
 #include <leetcode/util/TastcaseReader.h>
 
 TEST(LeetCode, LC2458_HeightOfBinaryTreeAfterSubtreeRemovalQueries) {
-    LeetCode::Util::TestcaseReader testcaseReader("testcases/leetcode/LC2458_HeightOfBinaryTreeAfterSubtreeRemovalQueries.txt", 3);
+    LeetCode::Util::TestcaseReader testcaseReader(
+        "testcases/leetcode/LC2458_HeightOfBinaryTreeAfterSubtreeRemovalQueries.txt", 3);
 
     while (testcaseReader.hasNext()) {
         const auto words = testcaseReader.next();
