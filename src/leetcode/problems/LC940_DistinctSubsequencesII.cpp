@@ -1,9 +1,10 @@
 #include <array>
 #include <vector>
+#include <common/util/Arithmetic.h>
 #include <leetcode/problems/LC940_DistinctSubsequencesII.h>
 
 int LeetCode::Problems::LC940::distinctSubseqII(const std::string &s) {
-    const auto mod = [](const long long x) { return (x % 1'000'000'007 + 1'000'000'007) % 1'000'000'007; };
+    const auto mod = Common::Util::Arithmetic::getModuloFunction(1'000'000'007);
     std::vector<long long> count1(s.size(), 0);
     std::vector<long long> count2(s.size(), 0);
     std::array<int, 26> lastIndex{};
