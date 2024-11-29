@@ -18,10 +18,21 @@ include_directories(
 )
 
 # Gather all .cpp files for the library from the 'src' directory
-file(GLOB LIBRARY_SOURCES "src/*/*/*.cpp")
+file(GLOB LIBRARY_SOURCES
+        "src/library/leetcode/*.cpp"
+        "src/library/leetcode/datatype/*.cpp"
+        "src/library/codefores/*.cpp"
+        "src/library/util/*.cpp"
+)
 
 # Gather all .cpp files for the tests from the 'tests' directory
-file(GLOB TEST_SOURCES "tests/*/problems/*.cpp")
+file(GLOB TEST_SOURCES
+        "src/tests/codefores/*.cpp"
+        "src/tests/codefores/util/*.cpp"
+        "src/tests/leetcode/*.cpp"
+        "src/tests/leetcode/util/*.cpp"
+        "src/tests/util/*.cpp"
+)
 
 # Create a static library 'DSA' from the source files
 add_library(DSA ${LIBRARY_SOURCES})
